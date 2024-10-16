@@ -3,7 +3,7 @@ Algoritmo stardew_valley
 	Definir madera, hierro, piedra, semillas, fruta Como Entero
 	Definir energia Como Real
 	Definir inventario, espacio Como Entero
-	Definir hacha, pico Como Logico
+	Definir hacha, pico, huerta1, huerta2 Como Logico
 	espacio <- 10
 	Dimension inventario[espacio]
 	energia <- 1
@@ -16,6 +16,8 @@ Algoritmo stardew_valley
 	piedra <- 0
 	hacha <- Falso
 	pico <- Falso
+	huerta1 <- Falso
+	huerta2 <- Falso
 	
 	menu() //hay que diseñar el menu
 	//se empieza el juego de dia, cada momento del dia dura 2 acciones [dia:1,2 tarde:3,4 y noche:5,6]. una vez que duerma se reinicia el time.
@@ -36,6 +38,7 @@ Algoritmo stardew_valley
 			Escribir "Quieres continuar?[1].Si, [9].No"
 			Leer salida
 		FinMientras
+		
 		Mientras time <= maxTime o opcionesLugares <> 9 Hacer
 			Escribir "Estas en frente de tu casa." "Que quieres hacer?"
 			Escribir "[1].Ir al bosque, [2].Ir a la mina, [3].Ir a la granja, [4].Entrar a la casa, [9].salir"
@@ -101,8 +104,16 @@ Algoritmo stardew_valley
 						Leer opcionesAcciones
 					FinMientras
 					Segun opcionesAcciones Hacer
-						Caso 1:
+						Caso 1: 
+							si huerta1 <- Falso y huerta2 <- Falso Entonces
+								Escribir "no hay alimento para cosechar"
+							FinSi
 						Caso 2:
+							si semillas > 0 Entonces
+								Escribir "desea plantar en huerta 1 o huerta 2?[]"
+							SiNo
+								Escribir "no tiene semillas para plantar"
+							FinSi
 						Caso 3:
 						Caso 4:
 					FinSegun
