@@ -13,7 +13,7 @@ Algoritmo stardew_valley
 	definir cosecha como cadena
 	definir i,j, respuesta  Como entero
 	definir mina, minaMinada como cadena
-	definir recoleccion, recolectado, personaje como cadena
+	definir recoleccion, recolectado, personaje, rip como cadena
 	
 	espacio <- 5
 	Dimension cofre[espacio]
@@ -101,15 +101,15 @@ Algoritmo stardew_valley
 	cosecha[1]<-"   {   }                                                                          " 
 	cosecha[2]<-"   {   }    _____                                                                  "
 	cosecha[3]<-"   {   }   /     \                                                                "
-	cosecha[4]<-"  |_   _| /       \                                                         \\                 Â° Â° Â°             Â° Â° Â°           Â° Â° Â°          Â° Â° Â°      \\ "
-	cosecha[5]<-"    | |  /_________\                                                         \\               Â° \Â°/ Â°           Â° \Â°/ Â°         Â° \Â°/ Â°        Â° \Â°/ Â°      \\ "                                     
-	cosecha[6]<-"    | | //   _  _   \\                                                        \\             Â°_\ | /_Â°         Â°_\ | /_Â°       Â°_\ | /_Â°	      Â°_\ | /_Â°	      \\  "
+	cosecha[4]<-"  |_   _| /       \                                                         \\                 ° ° °             ° ° °           ° ° °          ° ° °      \\ "
+	cosecha[5]<-"    | |  /_________\                                                         \\               ° \°/ °           ° \°/ °         ° \°/ °        ° \°/ °      \\ "                                     
+	cosecha[6]<-"    | | //   _  _   \\                                                        \\             °_\ | /_°         °_\ | /_°       °_\ | /_°	      °_\ | /_°	      \\  "
 	cosecha[7]<-"    | |//  _| |_| |_  \\              _-_                _-_                   \\       ~~ ~~ ~~| | ~~ ~~ ~~ ~~ ~~| |~ ~~ ~~ ~~ ~~| |~~ ~~ ~~ ~~ | |~~ ~~     \\          " 
 	cosecha[8]<-"    | //  | |_____| |  \\          /~~   ~~\          /~~   ~~\                 \\              | |               | |             | |            | |           \\     "  
 	cosecha[9]<-"    |//_________________\\      /~~         ~~\    /~~         ~~\               \\      ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~      \\    "
-	cosecha[10]<-"    /  ______| |______   \     {               }  {               }               \\                 Â° Â° Â°             Â° Â° Â°           Â° Â° Â°          Â° Â° Â°      \\  "    
-	cosecha[11]<-"   /  |             |  \  \     \  _-     -_  /    \  _-     -_  /                 \\      ~~  ~~  ~Â° \Â°/ Â° ~~ ~~ ~~  Â° \Â°/ Â° ~~ ~~ ~~Â° \Â°/ Â° ~~ ~~  Â° \Â°/ Â°      \\"
-	cosecha[12]<-"  /   |  _________  |   \  \     ~   \\ //  ~       ~   \\ //   ~                   \\             Â°_\ | /_Â°         Â°_\ | /_Â°       Â°_\ | /_Â°	      Â°_\ | /_Â°	      \\ "
+	cosecha[10]<-"    /  ______| |______   \     {               }  {               }               \\                 ° ° °             ° ° °           ° ° °          ° ° °      \\  "    
+	cosecha[11]<-"   /  |             |  \  \     \  _-     -_  /    \  _-     -_  /                 \\      ~~  ~~  ~° \°/ ° ~~ ~~ ~~  ° \°/ ° ~~ ~~ ~~° \°/ ° ~~ ~~  ° \°/ °      \\"
+	cosecha[12]<-"  /   |  _________  |   \  \     ~   \\ //  ~       ~   \\ //   ~                   \\             °_\ | /_°         °_\ | /_°       °_\ | /_°	      °_\ | /_°	      \\ "
 	cosecha[13]<-" |    |  |       |  |    |  |  _- -   | | _- _    _- -   | | _- _                    \\       ~~ ~~ ~~| | ~~ ~~ ~~ ~~ ~~| |~ ~~ ~~ ~~ ~~| |~~ ~~ ~~ ~~ | |~~ ~~     \\ "
 	cosecha[14]<-" |    |  |   o   |  |    |  |    _ -  | |   -_      _ -  | |   -_                     \\              | |               | |             | |            | |           \\ " 
 	cosecha[15]<-" |____|__|_______|__|____|__|        // \\              // \\                          \\      ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~ ~~      \\ "
@@ -120,15 +120,15 @@ Algoritmo stardew_valley
 	mina[3]<-"   |   |                       |  MINA  |  "
 	mina[4]<-"   |___|                        --------     "
 	mina[5]<-",,,|   |,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,   "
-	mina[6]<-"   |___|            Ã¦                                                                     &&&"
-	mina[7]<-"   |   | 	          Ã¦Ã¦Ã¦                                              Ã–                   &&&&&&&  "
-	mina[8]<-"                                          +                   Ã¦                       &&&&&&&&&&&"
-	mina[9]<-"                                         +++                 Ã¦Ã¦Ã¦                      "
-	mina[10]<-"                 +          Â¥Â¥Â¥                                                      "
-	mina[11]<-"                +++          Â¥                                                        "
+	mina[6]<-"   |___|            æ                                                                     &&&"
+	mina[7]<-"   |   | 	          æææ                                              Ö                   &&&&&&&  "
+	mina[8]<-"                                          +                   æ                       &&&&&&&&&&&"
+	mina[9]<-"                                         +++                 æææ                      "
+	mina[10]<-"                 +          ¥¥¥                                                      "
+	mina[11]<-"                +++          ¥                                                        "
 	mina[12]<-"        &&&                                                                   "
-	mina[13]<-"      &&&&&&&                              +             Ã†                Â¥Â¥Â¥           "
-	mina[14]<-"    &&&&&&&&&&                            +++                              Â¥            "
+	mina[13]<-"      &&&&&&&                              +             Æ                ¥¥¥           "
+	mina[14]<-"    &&&&&&&&&&                            +++                              ¥            "
 	mina[15]<-"  &&&&&&&&&&&&&& ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," 
 	
 	Dimension minaMinada[15]
@@ -188,7 +188,7 @@ Algoritmo stardew_valley
 	personaje[1]<-"     		                                _______"
 	personaje[2]<-"		                                    /       \"
 	personaje[3]<-"		                                    \  | \/\ \"
-	personaje[4]<-"		                                    _\_\ Â° Â°\| " 
+	personaje[4]<-"		                                    _\_\ ° °\| " 
 	personaje[5]<-"    	                      	      __\/  \/  ~_//"
 	personaje[6]<-"      		                        _/  /\  \_/\"
 	personaje[7]<-"                            _/   |    _ _/ "    
@@ -204,12 +204,61 @@ Algoritmo stardew_valley
 	personaje[17]<-"              | |               /__/"
 	personaje[18]<-"              |/               /__/_"
 	personaje[19]<-"                               |____\"    
-
 	
 	
+	dimension rip[41]
+	rip[1]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[2]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[3]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[4]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXKOkdolllcccccllodxOKNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[5]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOoc;,,;;:cllooooooollc:;,,:lkXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[6]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKd:,,:lxOKNWMMMMMMMMMMMMMMWNKOdc,,:d0NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[7]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMWMNk:,llkXWMMMMMMMMMMMMMMMMMMMMMMMMWWXOll.;dKWMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[8]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMWk;.:kXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWKo. .ckXWMMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[9]<-"MMMMMMMMMMMMMMMMMMMMMMMMWWXl.;ONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKc. .,xNMMMMMMMMMMMMMMMMMMMMMMM"
+	rip[10]<-"MMMMMMMMMMMMMMMMMMMMMMMMWO;.lkdcxNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo. ..;OWMMMMMMMMMMMMMMMMMMMMM"
+	rip[11]<-"MMMMMMMMMMMMMMMMMMMMMMMW0, .,,,l0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd.,l,.lXMMMMMMMMMMMMMMMMMMMM"
+	rip[12]<-"MMMMMMMMMMMMMMMMMMMMMMMK; ..cONWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNl.cOc.:KMMMMMMMMMMMMMMMMMMM"
+	rip[13]<-"MMMMMMMMMMMMMMMMMMMMMMNl ...oXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0,.kXl.cXMMMMMMMMMMMMMMMMMM"
+	rip[14]<-"MMMMMMMMMMMMMMMMMMMMMMk. .:xKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWo.:XK;.dWMMMMMMMMMMMMMMMMM"
+	rip[15]<-"MMMMMMMMMMMMMMMMMMMMMNc.cKWMWWWWNNXXNWMMMMMMMMMWWWMMMMMMMWXXKXNNWMMMMMMMMMO  0Wx.;KMMMMMMMMMMMMMMMMM"
+    rip[16]<-"MMMMMMMMMMMMMMMMMMMMMO..OMMMMNx:.... ;o0WMMMMWOc;d0NMMMMXo.....,cxXWMMMMMMX;.xWK;.xWMMMMMMMMMMMMMMMM"
+	rip[17]<-"MMMMMMMMMMMMMMMMMMMMWd.:XMMMMK,  ....   OWMWMWo  .lOMMMMK,  . ..  ,OWMWMMMNc.lx:. lNMMMMMMMMMMMMMMMM"
+	rip[18]<-"MMMMMMMMMMMMMMMMMMMMNc.oWMMMMK;  ;0Kl. .dWMMMWd. .;kMMMMK,  :KNx.  cNMMMMMWl.cOd, :XMMMMMMMMMMMMMMMM"
+    rip[19]<-"MMMMMMMMMMMMMMMMMMMMK;.xMMMMMX;  ., . .:KMMMMMx. .,xWMMMX;  ,xx:.  oWMMMMMWo.cxc  ,KMMMMMMMMMMMMMMMM"
+	rip[20]<-"MMMMMMMMMMMMMMMMMMMM0  0MMMMMX:       ;0WMMMMMk.  .oWMMMX;       .oXMMMMMMWd.:0x:.,KMMMMMMMMMMMMMMMM"
+	rip[21]<-"MMMMMMMMMMMMMMMMMMMMk.,KMMMMMN:  .c;.  ;0WMMMMO.  .lWMMMX:  .;ldkXWMMMMMMMWd.cOo;. 0MMMMMMMMMMMMMMMM"
+	rip[22]<-"MMMMMMMMMMMMMMMMMMMMx.:XMMMMMNc  ,0Nx.  :XMMMM0,   cNMMMX:  ,KMMMMMMMMMMMMWd.c0x:. 0MMMMMMMMMMMMMMMM"
+	rip[23]<-"MMMMMMMMMMMMMMMMMMMWo.cNMMMMMNl  ,0MNc  ,0WMMMX:  .cNMMMNl  ;KMMMMMMMMMMMMWo.c0Oo. 0MMMMMMMMMMMMMMMM"
+	rip[24]<-"MMMMMMMMMMMMMMMMMMMNl.oWMMMMMMXxdOWMWKocxNMMMMWKdxkKWMMMWKxd0WMMMMMMMMMMMMNl.lkc. ,0MMMMMMMMMMMMMMMM"
+	rip[25]<-"MMMMMMMMMMMMMMMMMMMN:.dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNc.oKKd.,KMMMMMMMMMMMMMMMM"
+	rip[26]<-"MMMMMMMMMMMMMMMMMMMX:.xMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWMMMMMMMNc.cl,. ;XMMMMMMMMMMMMMMMM"
+	rip[27]<-"MMMMMMMMMMMMMMMMMMMK;.kMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNNWMMX: ;dd; :XMMMMMMMMMMMMMMMM"
+	rip[28]<-"MMMMMMMMMMMMMMMMMMMK,.ONNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKx:,dNMMK,  ,,. cNMMMMMMMMMMMMMMMM"
+	rip[29]<-"MMMMMMMMMMMMMMMMMMM0,.::;xWMWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx:  :xXWMM0,.ckx, oWMMMMMMMMMMMMMMMM"
+	rip[30]<-"MMMMMMMMMMMMMMMMMMM0   ckXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXx:,  ,,:OWMMMO...,,..dWMMMMMMMMMMMMMMMM"
+	rip[31]<-"MMMMMMMMMMMMMMMMMMMO..xOocOWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0c,,,,,,,ckNMMMMk..oxl..xMMMMMMMMMMMMMMMMM"
+	rip[32]<-"MMMMMMMMMMMMMMMMMMMO. ..:dKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0:...;lOXMMMMMMWd...,,..kMMMMMMMMMMMMMMMMM"
+	rip[33]<-"MMMMMMMMMMMMMWXXWMMO..l0NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXo,;o0NWMMMMMMMMWl ;Ok:..OMMMMMMMMMMMMMMMMM"
+	rip[34]<-"MMMMMMMMMMMMMXc oKWO.,KMMXkkNMMMMMMMMMMMMMMMMMMMMMWMMMMMMWKKWMMMWMMMMMMMMNc .;lc.,KMMMWMMMMMMMMMMMMM"
+	rip[35]<-"MMMMMMMMMMMMWNl  ,xd.,KMNo..0MMMWNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK;.:oc. :XMMMMMMMMMMMMMMMMM"
+	rip[36]<-"MMMMMMMMMMWNo;, .... ,KWx. .ONOo;:0W0odXMMMMMMMMMMMMWXOKWMMMMMMWMM0oxXWMM0, .;c, cNMWWMMMMMMMMMMMMMM"
+	rip[37]<-"MMMMMMMMMMMWk.  .xk, ,0x....,;. .cxl,,xNMMMMMMW0x0NWWk.;KMMMMMKl:dl.  l0Wk.,o;   ;dl:xWMMMMMMMMMMMMM"
+	rip[38]<-"MMMMMMMMMMMMW0;.;KW0clo,,d:.,l,.,;.o0NNNNXXXXKc .,l0K:.oKKKKKO;  .   ..;, ... .  ...,:cxNMMMMMMMMMMM"
+	rip[39]<-"MMMMMMMMMMMMWWXc.lXMWNOxKNXKNNd.....;;;;;;;;;;;   ...cc..,;,;;;-. .c,.lkl..;d0d;;..,;:lONMMMMMMMMMMM"
+	rip[40]<-"MMMMMMMMMMMMMMMN00NMMMMMMMMMWNxcx00000000KKKKKK0ocdkxcddoOKKKXXXk:lKNKXWWNXNMMWNN0OKNWMMMMMMMMMMMMMM"
+    rip[41]<-"MMMMMMMMMMMMMMMMMMMMMMMMMMMWMMMMMMMMMMMMMMMMMMMMWWWMMWMMMMMMMMMMMNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM"
+	
+	
+	Escribir ""
+	Escribir ""
+	Escribir ""
+	Escribir ""
+	Escribir ""
+	Escribir ""
 	Escribir "                        PC: Para iniciar presione una tecla cualquiera"
 	Esperar 100 Milisegundos	
-	Escribir "                             Usuario: cuÃ¡l es cualquiera?"
+	Escribir "                             Usuario: cuál es cualquiera?"
 	Esperar 100 Milisegundos
 	Escribir ""
 	
@@ -229,7 +278,7 @@ Algoritmo stardew_valley
 	// Ciclo principal del juego, hasta que se seleccione "salir"
 	Mientras salida <> 9 Hacer
 		Mientras time <= maxTime y energia <> 0 y opcionesLugares <> 9 Hacer
-			// Cambios en el mensaje segÃºn el tiempo del dÃ­a
+			// Cambios en el mensaje según el tiempo del día
 			si time = 1 Entonces
 				Esperar 200 Milisegundos
 				Escribir ""
@@ -253,10 +302,10 @@ Algoritmo stardew_valley
 				Escribir casa[i]
 			FinPara
 			
-			// SelecciÃ³n de lugar
+			// Selección de lugar
 			Escribir ""
 			Escribir "" 	
-            Escribir "              EstÃ¡s en frente de tu casa. Â¿QuÃ© quieres hacer?"
+            Escribir "              Estás en frente de tu casa. ¿Qué quieres hacer?"
 			Escribir ""
 			Escribir "              Una vez que termine la actividad volveras a la entrada de tu hogar"
 			Escribir "                     [1]. Ir al bosque" 
@@ -267,7 +316,7 @@ Algoritmo stardew_valley
             Leer opcionesLugares
 			Limpiar Pantalla
 			
-            // ValidaciÃ³n de opciones de lugares
+            // Validación de opciones de lugares
             Mientras opcionesLugares < 1 o opcionesLugares > 4 y opcionesLugares <> 9 Hacer
 				
 				Para i<-1 Hasta 15 Con Paso 1 Hacer
@@ -276,7 +325,7 @@ Algoritmo stardew_valley
 				
 				Escribir ""
 				Escribir ""
-                Escribir "              No existe esa opciÃ³n."
+                Escribir "              No existe esa opción."
 				Escribir "                 [1]. Ir al bosque" 
 				Escribir "                 [2]. Ir a la mina"
 				Escribir "                 [3]. Ir a la granja "
@@ -286,7 +335,7 @@ Algoritmo stardew_valley
             FinMientras
 			Limpiar Pantalla
             
-            // RestricciÃ³n nocturna
+            // Restricción nocturna
             Mientras (time = 7) y ((opcionesLugares <= 2) o (opcionesLugares > 4) y (opcionesLugares <> 9)) Hacer
 				Escribir "" 
 				Escribir ""
@@ -316,7 +365,7 @@ Algoritmo stardew_valley
 					
 					Escribir ""
 					Escribir ""
-                    Escribir "                    EstÃ¡s en el bosque, un lugar para recolectar madera y semillas."
+                    Escribir "                    Estás en el bosque, un lugar para recolectar madera y semillas."
 					Escribir "                         [1]. Talar arbol" 
 					Escribir "                         [2]. Recolectar semillas y madera" 
 					Escribir "                         [3]. Volver a la casa"
@@ -336,7 +385,7 @@ Algoritmo stardew_valley
 					
 					Mientras opcionesAcciones <> 3 Hacer
 						Segun opcionesAcciones Hacer
-							Caso 1: // Talar Ã¡rbol
+							Caso 1: // Talar árbol
 								si hachaP = Verdadero o hachaH = Verdadero Entonces
 									madera <- madera + Aleatorio(25, 50)
 									energia <- energia - 0.25
@@ -393,7 +442,7 @@ Algoritmo stardew_valley
 						time <- time + 1
 						Escribir ""
 						Escribir "" 
-						Escribir "        [1]. Talar Ã¡rbol" 
+						Escribir "        [1]. Talar árbol" 
 						Escribir "        [2]. Recolectar semillas y madera" 
 						Escribir "        [3]. Volver a la casa"
 						Leer opcionesAcciones
@@ -424,7 +473,7 @@ Algoritmo stardew_valley
 					
 					Escribir "" 
 					Escribir ""
-                    Escribir "               EstÃ¡s en la mina, un lugar para recolectar piedra y minar hierro."
+                    Escribir "               Estás en la mina, un lugar para recolectar piedra y minar hierro."
 					Escribir "               [1]. Recolectar piedras"
 					Escribir "               [2]. Minar hierro "
 					Escribir "               [3]. Volver a la casa"
@@ -546,7 +595,7 @@ Algoritmo stardew_valley
                 Caso 3: // Granja: sembrar y recolectar
 					Escribir ""
 					Escribir ""
-                    Escribir "                    EstÃ¡s en la granja, puedes sembrar y recolectar productos."
+                    Escribir "                    Estás en la granja, puedes sembrar y recolectar productos."
 					Escribir "                              [1]. Sembrar semillas"
 					Escribir "                              [2]. Recolectar productos"
 					Escribir "                              [3]. Volver a la casa"
@@ -725,7 +774,7 @@ Algoritmo stardew_valley
 							Caso 3:
 								Escribir "" 
 								escribir""
-								Escribir "                QuÃ© objeto desea crear?"
+								Escribir "                Qué objeto desea crear?"
 								Escribir "                [1]. Hacha de piedra" 
 								Escribir "                [2]. Pico de piedra" 
 								Escribir "                [3]. Hacha de hierro "
@@ -813,22 +862,25 @@ Algoritmo stardew_valley
             FinSegun
 			
 			si time = maxTime Entonces
-				para i<-1 hasta 15 Hacer
-					Escribir personaje[i]
+				para i<-1 hasta 41 Hacer
+					esperar 250 Milisegundos
+					Escribir rip[i]
 				FinPara
 				Escribir ""
 				Escribir ""
-				Escribir "         Es de noche y el cuco te atrapÃ³, has muerto."
+				Escribir "         Es de noche y el cuco te atrapó, has muerto."
 				FinJuego()
 			FinSi
 			si energia = 0 Entonces
-				para i<-1 hasta 15 Hacer
-					Escribir personaje[i]
+				para i<-1 hasta 41  Hacer
+					esperar 250 Milisegundos
+					Escribir rip[i]
 				FinPara
 				
 				Escribir ""
 				Escribir ""
-				Escribir "         Te has quedado sin energÃ­a."
+				Escribir "         Te has quedado sin energía"
+				Escribir "         Has muerto!"
 				FinJuego()
 			FinSi
 		FinMientras
@@ -843,7 +895,7 @@ FinFuncion
 
 Funcion  crear_jugador(nombre Por Referencia, sexo Por Referencia) //inicializar atributos del jugador
 	Escribir "                                  -.-.-.-.-.-.-.-.-.-.-.-.-."
-	Escribir "                                 |     CÃ³mo te llamas?     |"   
+	Escribir "                                 |     Cómo te llamas?     |"   
 	Escribir "                                  -.-.-.-.-.-.-.-.-.-.-.-.-."
 	leer nombre
 	
@@ -861,28 +913,28 @@ Funcion bienvenida(nombre, sexo)
 	si sexo= 'H'o sexo='h' entonces 
 		
 		Escribir "	"
-		Escribir "Bienvenido ", nombre, "!"
+		Escribir "             Bienvenido a Pueblo Pelicano,", nombre, "!"
 		Escribir "           "
 		Esperar  150 Milisegundos
-		Escribir "Te mudas al Valle..." Sin Saltar 
+		Escribir "             Te mudas al Valle alejandote de la vida de oficina..." Sin Saltar 
 		esperar 200 milisegundos
-		Escribir "Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
+		Escribir "             Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
 		Esperar  200 Milisegundos
-		Escribir "Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
+		Escribir "             Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
 		esperar 200 milisegundos
-		escribir  "Â¡te dispones a empezar tu nueva vida!"
+		escribir  "            ¡te dispones a empezar tu nueva vida!"
 	SiNo
 		Escribir "	"
-		Escribir "Bienvenida ", nombre, "!"
+		Escribir "            Bienvenida a Pueblo Pelicano,", nombre, "!"
 		Escribir "           "
 		Esperar  150 Milisegundos
-		Escribir "Te mudas al Valle..." Sin Saltar 
+		Escribir "           Te mudas al Valle..." Sin Saltar 
 		esperar 200 milisegundos
-		Escribir "Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
+		Escribir "          Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
 		Esperar  200 Milisegundos
-		Escribir "Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
+		Escribir "          Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
 		esperar 200 milisegundos
-		escribir  "Â¡te dispones a empezar tu nueva vida!"
+		escribir  "         ¡te dispones a empezar tu nueva vida!"
 	finsi
 	
 FinFuncion
@@ -892,7 +944,7 @@ Funcion mostrar_pantalla_inicio
 	
 	
 	Esperar 350 Milisegundos
-	Escribir"Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°"
+	Escribir"°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"
 	Esperar 250 Milisegundos
 	Escribir"                                                                                                                 "
 	Esperar 250 Milisegundos
@@ -909,16 +961,16 @@ Funcion mostrar_pantalla_inicio
 	Escribir"                 #    #    #       #  #    #   #     # #         #  #  #             # #    #     #  #       #       #           #      "    
 	Esperar 250 Milisegundos
 	Escribir"          #######     #    #       #  #     #  ######  #######    ## ##               #     #     #  ####### ####### #######     #       "
-	Escribir""
+	Escribir ""
 	Escribir"                                                                                                                       PSeInt version  "	
 	Esperar 250 Milisegundos
 	Escribir"                                                                                                                 "	
 	Esperar 250 Milisegundos
-	Escribir "                                                 Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°"
+	Escribir "                                                 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"
 	Esperar  250 Milisegundos	 
-	Escribir"Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°             EL COMIENZO DE UNA NUEVA VIDA         Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°"
+	Escribir"°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             EL COMIENZO DE UNA NUEVA VIDA         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"
 	Esperar 250 Milisegundos
-	Escribir "                                                 Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°Â°"
+	Escribir "                                                 °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°"
 	Esperar 250 Milisegundos
 	Escribir ""
 	Esperar 250 Milisegundos
@@ -1001,14 +1053,14 @@ Funcion mostrar_pantalla_inicio
 Subalgoritmo FinJuego
 	Definir salida Como Entero
 	Escribir ""
-    Escribir "           Â¿Quieres continuar? VolverÃ¡s a empezar."
-    Escribir "                    [1]. SÃ­"
+    Escribir "           ¿Quieres continuar? Volverás a empezar."
+    Escribir "                    [1]. Sí"
     Escribir "                    [9]. No"
     Leer salida
     Mientras salida <> 1 y salida <> 9 Hacer
 		Escribir ""
-        Escribir "             ERROR, no existe esa opciÃ³n."
-		Escribir "                     [1]. SÃ­"
+        Escribir "             ERROR, no existe esa opción."
+		Escribir "                     [1]. Sí"
 		Escribir "                     [9]. No"
         Leer salida
     FinMientras
