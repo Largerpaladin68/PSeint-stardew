@@ -18,7 +18,7 @@ Algoritmo stardew_valley
 	espacio <- 5
 	Dimension cofre[espacio]
 	energia <- 1
-	time <- 1
+	time <- 6
 	maxTime <- 9
 	madera <- 0
 	hierro <- 0
@@ -30,7 +30,7 @@ Algoritmo stardew_valley
 	picoH <- Falso
 	picoP <- Falso
 	huerta1 <- Falso
-
+	
 	
 	Dimension arbol[9]
 	arbol[1] <-"          _-_"  
@@ -311,13 +311,14 @@ Algoritmo stardew_valley
 			Escribir "                     [1]. Ir al bosque" 
 			Escribir "                     [2]. Ir a la mina" 
 			Escribir "                     [3]. Ir a la granja"
-			Escribir "                     [4]. Entrar a la  casa" 
+			Escribir "                     [4]. Entrar a la  casa"
+			Escribir "                     [5]. Ver inventario"
 			Escribir "                     [9]. salir"
             Leer opcionesLugares
 			Limpiar Pantalla
 			
             // Validación de opciones de lugares
-            Mientras opcionesLugares < 1 o opcionesLugares > 4 y opcionesLugares <> 9 Hacer
+            Mientras opcionesLugares < 1 o opcionesLugares > 5 y opcionesLugares <> 9 Hacer
 				
 				Para i<-1 Hasta 15 Con Paso 1 Hacer
 					Escribir casa[i]
@@ -330,13 +331,14 @@ Algoritmo stardew_valley
 				Escribir "                 [2]. Ir a la mina"
 				Escribir "                 [3]. Ir a la granja "
 				Escribir "                 [4]. Entrar a la casa "
+				Escribir "                 [5]. Ver inventario"
 				Escribir "                 [9]. salir"
                 Leer opcionesLugares
             FinMientras
 			Limpiar Pantalla
             
             // Restricción nocturna
-            Mientras (time = 7) y ((opcionesLugares <= 2) o (opcionesLugares > 4) y (opcionesLugares <> 9)) Hacer
+            Mientras (time = 7) y ((opcionesLugares <= 2) o (opcionesLugares > 5) y (opcionesLugares <> 9)) Hacer
 				Escribir "" 
 				Escribir ""
                 Escribir "                   Es de noche, no puedes acceder a este lugar."
@@ -344,6 +346,7 @@ Algoritmo stardew_valley
 				Escribir "                        [2]. Ir a la mina "
 				Escribir "                        [3]. Ir a la granja" 
 				Escribir "                        [4]. Entrar a la casa" 
+				Escribir "                        [5]. Ver inventario"
 				Escribir "                        [9]. salir"
                 Leer opcionesLugares
 				Limpiar Pantalla
@@ -714,10 +717,11 @@ Algoritmo stardew_valley
 					Escribir "              [2]. Guardar materiales "
 					Escribir "              [3]. Crear objetos"
 					Escribir "              [4]. Salir afuera"
+					Escribir "              [5]. Ver inventario"
 					Leer opcionesAcciones
 					Limpiar Pantalla
 					
-					Mientras opcionesAcciones < 1 o opcionesAcciones > 4 Hacer
+					Mientras opcionesAcciones < 1 o opcionesAcciones > 5 Hacer
 						Escribir "         *******  Opcion incorrecta ******"
 						Escribir "" 	
 						Escribir "            Que desea hacer?"
@@ -726,8 +730,10 @@ Algoritmo stardew_valley
 						Escribir "            [2]. Guardar materiales/sacar cosas del inventario" 
 						Escribir "            [3]. Crear objetos"
 						Escribir "            [4]. Salir afuera"
+						Escribir "            [5]. Ver inventario"
 						Leer opcionesAcciones
 					FinMientras
+					
 					Mientras opcionesAcciones <> 4 Hacer
 						Segun opcionesAcciones Hacer
 							Caso 1:
@@ -847,6 +853,26 @@ Algoritmo stardew_valley
 											Escribir "          Ya has creado un pico de hierro!"
 										FinSi
 								FinSegun
+							Caso 5: //inventario
+								Escribir "              Madera: [",madera,"]"
+								Escribir "              piedra: [",piedra,"]"
+								Escribir "              hierro: [",hierro,"]"
+								Escribir "              semillas: [",semillas,"]"
+								Escribir "              fruta [",fruta,"]"
+								si hachaP = Verdadero Entonces
+									Escribir "              hacha de piedra"
+								FinSi
+								si hachaH = Verdadero Entonces
+									Escribir "              hacha de hierro"
+								FinSi
+								si picoP = Verdadero Entonces
+									Escribir "              pico de piedra"
+								FinSi
+								si picoH = Verdadero Entonces
+									Escribir "              pico de hierro"
+								FinSi
+								esperar 4 segundos
+								Limpiar Pantalla
 						FinSegun
 						Escribir ""
 						Escribir ""
@@ -856,34 +882,54 @@ Algoritmo stardew_valley
 						Escribir "              [2]. Guardar materiales "
 						Escribir "              [3]. Crear objetos"
 						Escribir "              [4]. Salir afuera"
+						Escribir "              [5]. Ver inventario"
 						Leer opcionesAcciones
 						Limpiar Pantalla
 					FinMientras
-            FinSegun
-			
-			si time = maxTime Entonces
-				para i<-1 hasta 41 Hacer
-					esperar 250 Milisegundos
-					Escribir rip[i]
-				FinPara
-				Escribir ""
-				Escribir ""
-				Escribir "         Es de noche y el cuco te atrapó, has muerto."
-				FinJuego()
-			FinSi
-			si energia = 0 Entonces
-				para i<-1 hasta 41  Hacer
-					esperar 250 Milisegundos
-					Escribir rip[i]
-				FinPara
-				
-				Escribir ""
-				Escribir ""
-				Escribir "         Te has quedado sin energía"
-				Escribir "         Has muerto!"
-				FinJuego()
-			FinSi
+				Caso 5:
+					Escribir "              Madera: [",madera,"]"
+					Escribir "              piedra: [",piedra,"]"
+					Escribir "              hierro: [",hierro,"]"
+					Escribir "              semillas: [",semillas,"]"
+					Escribir "              fruta [",fruta,"]"
+					si hachaP = Verdadero Entonces
+						Escribir "              hacha de piedra"
+					FinSi
+					si hachaH = Verdadero Entonces
+						Escribir "              hacha de hierro"
+					FinSi
+					si picoP = Verdadero Entonces
+						Escribir "              pico de piedra"
+					FinSi
+					si picoH = Verdadero Entonces
+						Escribir "              pico de hierro"
+					FinSi
+					esperar 4 segundos
+					Limpiar Pantalla
+			FinSegun
 		FinMientras
+		si time >= maxTime Entonces
+			para i<-1 hasta 41 Hacer
+				esperar 250 Milisegundos
+				Escribir rip[i]
+			FinPara
+			Escribir ""
+			Escribir ""
+			Escribir "         Es de noche y el cuco te atrapó, has muerto."
+			FinJuego(salida)
+		SiNo
+			si energia = 0 Entonces
+			para i<-1 hasta 41  Hacer
+				esperar 250 Milisegundos
+				Escribir rip[i]
+			FinPara
+			Escribir ""
+			Escribir ""
+			Escribir "         Te has quedado sin energía"
+			Escribir "         Has muerto!"
+			FinJuego(salida)
+			FinSi
+		FinSi
 	FinMientras
 	Escribir "FIN"
 FinAlgoritmo
@@ -916,11 +962,11 @@ Funcion bienvenida(nombre, sexo)
 		Escribir "             Bienvenido a Pueblo Pelicano,", nombre, "!"
 		Escribir "           "
 		Esperar  150 Milisegundos
-		Escribir "             Te mudas al Valle alejandote de la vida de oficina..." Sin Saltar 
+		Escribir "             Te mudas al Valle alejandote de la vida de oficina..." 
 		esperar 200 milisegundos
 		Escribir "             Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
 		Esperar  200 Milisegundos
-		Escribir "             Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
+		Escribir "             Armado con herramientas de segunda mano y unas cuantas monedas,"   
 		esperar 200 milisegundos
 		escribir  "            ¡te dispones a empezar tu nueva vida!"
 	SiNo
@@ -928,11 +974,11 @@ Funcion bienvenida(nombre, sexo)
 		Escribir "            Bienvenida a Pueblo Pelicano,", nombre, "!"
 		Escribir "           "
 		Esperar  150 Milisegundos
-		Escribir "           Te mudas al Valle..." Sin Saltar 
+		Escribir "           Te mudas al Valle..." 
 		esperar 200 milisegundos
 		Escribir "          Has heredado la vieja parcela de la granja de tu abuelo en Stardew Valley." 
 		Esperar  200 Milisegundos
-		Escribir "          Armado con herramientas de segunda mano y unas cuantas monedas,"  Sin Saltar 
+		Escribir "          Armado con herramientas de segunda mano y unas cuantas monedas,"  
 		esperar 200 milisegundos
 		escribir  "         ¡te dispones a empezar tu nueva vida!"
 	finsi
@@ -1050,8 +1096,7 @@ Funcion mostrar_pantalla_inicio
 	FinFuncion
 
 
-Subalgoritmo FinJuego
-	Definir salida Como Entero
+Subalgoritmo FinJuego(salida Por Referencia)
 	Escribir ""
     Escribir "           ¿Quieres continuar? Volverás a empezar."
     Escribir "                    [1]. Sí"
@@ -1078,6 +1123,5 @@ Subalgoritmo FinJuego
 		picoH <- Falso
 		picoP <- Falso
 		huerta1 <- Falso
-		huerta2 <- Falso
     FinSi
 FinSubalgoritmo
